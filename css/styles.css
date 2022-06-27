@@ -367,7 +367,7 @@ textarea.input::placeholder {
   border-color: var(--accent-color);
 }
 .input-check:focus + .check-icon {
-  outline: 2px var(--accent-color);
+  border-color: var(--accent-color);
 }
 .policy-link {
   text-decoration: underline;
