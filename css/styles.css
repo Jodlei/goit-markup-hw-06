@@ -256,7 +256,6 @@ img {
   transform: scale(1.1) translate(-50%, -50%);
 }
 .modal {
-  display: flex;
   justify-content: center;
   position: absolute;
   top: 50%;
@@ -334,17 +333,44 @@ img {
 .input-container:not(:last-child) {
   margin-bottom: 10px;
 }
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  width: 100%;
+}
 .input-container-comments {
+  display: flex;
+  padding: 0;
+  margin-bottom: 20px;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  width: 100%;
 }
 .input-wrap {
   position: relative;
+  padding: 0;
+  margin: 0;
 }
-textarea.input {
+.textarea-input {
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 14px 42px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   height: 120px;
   resize: none;
   padding: 12px 16px;
 }
-textarea.input::placeholder {
+.textarea-input:focus {
+  border-color: var(--accent-color);
+}
+.textarea-input::placeholder {
   margin: 12px 16px;
   font-style: normal;
   font-weight: 400;
@@ -388,10 +414,8 @@ textarea.input::placeholder {
   color: var(--secondary-text-color);
 }
 .policy-container {
-  margin-top: 20px;
   padding-bottom: 0;
-}
-.modal-form {
+  margin-bottom: 30px;
 }
 .btn-send-modal {
   width: 200px;
@@ -411,7 +435,7 @@ textarea.input::placeholder {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--basic-color-white);
-  margin-top: 30px;
+  margin-top: 0;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0px;
